@@ -1,7 +1,7 @@
 import Data.List (inits)
 
 -- 1
--- rectangle width height ir bottom let coordinates, circle radius ir center coordinate
+-- rectangle width height ir kampo coordinates, circle radius ir center coordinate
 data Shape = Circle Float (Float, Float) | Rectangle Float Float (Float, Float)
     deriving (Show, Ord, Eq)  
 
@@ -71,7 +71,6 @@ total f n = foldr (\x acc -> f x + acc) 0 [0..n]
 
 --7 
 -- id - identitiy function, pvz input : id 3, output 3
--- n iteraciju skaicius, f funkcija
 iterRec :: Integer -> (a -> a) -> (a -> a)
 iterRec n f
   | n <= 0    = id -- stop
